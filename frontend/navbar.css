@@ -1,19 +1,25 @@
 .navBar{
-    color:#fff;
-    background-color:#000;
+    font-family: Inter;
+    font-weight: bold;
+    color:#000000;
+    background-color:#ffffff;
     display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 30px 5px 30px;
+}
+.navBar img{
+    height:60px;
 }
 .navContainer{
     display: none;
 }
 
-.navBar:first-child{
+.navBar div{
     align-items: center;
     font-size:20px;
-    line-height: 40px;
+    line-height: 25px;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -26,10 +32,12 @@
 }
 .lg-Navlist>li{
     margin: 0 10px 0 10px;
+
 }
 .lg-Navlist>li>a{
     text-decoration: none;
-    color: #fff;
+    color: inherit;
+    padding: 10px 10px 10px 10px;
 }
 @media screen and (max-width: 450px){
     .navContainer{
@@ -93,3 +101,4 @@
         text-transform: uppercase;
     }
 }
+
