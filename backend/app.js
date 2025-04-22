@@ -1,24 +1,18 @@
-//main you know
- document.addEventListener("DOMContentLoaded", function (){
+document.addEventListener('DOMContentLoaded', function() {
+ // Mobile menu toggle functionality
+ const menuToggle = document.querySelector('.menu-toggle');
+ const mobileNavLinks = document.querySelector('.mobile-nav-links');
 
+ menuToggle.addEventListener('click', function() {
+  mobileNavLinks.classList.toggle('active');
+  this.textContent = mobileNavLinks.classList.contains('active') ? '✕' : '☰';
  });
 
-window.addEventListener("scroll", function(){
- const mobileNav = document.getElementById("mobile-nav");
- const navBar = document.getElementById("navBar");
-if(window.scrollY > 0){
-
- mobileNav.style.display = "sticky";
-}
+ // Close mobile menu when a link is clicked
+ document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+   mobileNavLinks.classList.remove('active');
+   menuToggle.textContent = '☰';
+  });
+ });
 });
-
-document.addEventListener("DOMContentLoaded", function (){
-const navBtn= document.getElementById('navBtn');
-const navList = document.getElementById('navList');
-
-navBtn.addEventListener('click', function(){
- navList.classList.toggle('active');
- navList.style.maxHeight = navList.style.maxHeight ? null : navList.scrollHeight + 'px';
-
-})
-})
